@@ -52,30 +52,30 @@
 
     // Set these variables to their DOM elements
 
-    const coffeeImage = document.querySelector('#coffee-image');
+    const coffeeImage = $('#coffee-image');
     const revenueMessage = 'replace me';
 
-    coffeeImage.src="static/coffee_beans.jpg";
+    coffeeImage.attr('src', "static/coffee_beans.jpg")
+    // coffeeImage.src="static/coffee_beans.jpg";
 
-    coffeeImage.addEventListener('click', coffeeMaker);
+    coffeeImage.on('click', coffeeMaker);
 
     // const coffeeMakerTimer = setTimeout(coffeeMaker, 1500);
 
     function coffeeMaker() {
-        coffeeImage.src="static/coffee_machine.jpg";
+        coffeeImage.attr('src', "static/coffee_machine.jpg");
         setTimeout(makeMug, 2500);
-
     }
 
     function makeMug() {
-        coffeeImage.src="static/coffee_mug.jpg";
+        coffeeImage.attr('src', "static/coffee_mug.jpg");
         setTimeout(makeBean, 3000);
     }
 
     // const coffeeBeanTime = setTimeout(makeBean, 3000);
 
     function makeBean() {
-        coffeeImage.src="static/coffee_beans.jpg";
+        coffeeImage.attr('src', "static/coffee_beans.jpg");
     }
 
 
